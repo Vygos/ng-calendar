@@ -1,27 +1,29 @@
-# NgCalendar
+# NG CALENDAR COMPONENT
+### POC de apresentação de agendamentos utilizando a biblioteca FullCalendar.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
-## Development server
+## Instruções
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> PASSO 1: clonar o repositório e instalar as dependências necessárias.
 
-## Code scaffolding
+```
+  git clone https://github.com/Vygos/ng-calendar.
+  cd ng-calendar
+  npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> PASSO 2: instalar o DB.json globalmente
+```
+ npm install -g json-server
+```
 
-## Build
+> PASSO 3: Executar o db.json
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Acessar a pasta db na raiz do projeto;
+ 
+```
+cd ng-calendar/db
+json-server --watch db.json
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+>PASSO 4: Executar o projeto com ng serve.
