@@ -8,11 +8,15 @@
 
 ```
   git clone https://github.com/Vygos/ng-calendar.
+```
+```
   cd ng-calendar
+```
+```
   npm install
 ```
 
-> PASSO 2: instalar o DB.json globalmente
+> PASSO 2: instalar o a biblioteca json-server globalmente
 ```
  npm install -g json-server
 ```
@@ -23,6 +27,8 @@
  
 ```
 cd ng-calendar/db
+```
+```
 json-server --watch db.json
 ```
 
