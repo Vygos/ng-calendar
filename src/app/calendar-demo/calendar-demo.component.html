@@ -1,0 +1,16 @@
+<p-listbox
+  [options]="eventsOptions"
+  multiple="multiple"
+  checkbox="checkbox"
+  [(ngModel)]="selectedEvent"
+  (onClick)="preencherAgenda($event)"
+  [style]="{width: '200px'}">
+</p-listbox>
+<p-card header="Agendamentos">
+  <ng-calendar
+    [events]="events"
+    [options]="options"
+    [style]="{width: '800px', height: '500px'}"
+    >
+  </ng-calendar>
+</p-card>
