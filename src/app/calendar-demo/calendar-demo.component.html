@@ -12,5 +12,6 @@
     [options]="options"
     [style]="{width: '800px', height: '500px'}"
     >
+    <app-dialog [(display)]="display" (hide)="closeDialog($event)"></app-dialog>
   </ng-calendar>
 </p-card>

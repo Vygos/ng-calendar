@@ -9,6 +9,8 @@ import {CardModule} from 'primeng/card';
 import { CalendarDemoComponent } from './calendar-demo/calendar-demo.component';
 import { ListboxModule } from 'primeng/listbox';
 import { FormsModule } from '@angular/forms';
+import { DialogComponent } from './dialog/dialog.component';
+import { DialogModule } from 'primeng/dialog';
 
 
 
@@ -16,6 +18,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     CalendarDemoComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     CardModule,
     ListboxModule,
     FormsModule,
+    DialogModule,
     CalendarModule
   ],
   providers: [],

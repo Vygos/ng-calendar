@@ -22,18 +22,22 @@ export class CalendarDemoComponent implements OnInit {
 
   selectedEvent;
 
+  display: boolean = false;
+
   constructor(private readonly appService: AppService) { }
 
   ngOnInit() {
     this.appService.obterEventos().subscribe((value: Events[]) => {
       this.eventsOptions = this.buildOptions(value);
       this.events = value[0].event;
-      this.goToDate(value[0].event[0].start)
+      this.goToDate(value[0].event[0].start);
 
     });
 
     this.options = {
-      dateClick: (e) =>{ console.log("dateclick", e)}
+      eventClick: () => {
+        this.display = !this.display;
+      }
     }
   }
 
@@ -52,5 +56,9 @@ export class CalendarDemoComponent implements OnInit {
 
   goToDate(date) {
     this.calendarComponent.calendar.gotoDate(date);
+  }
+
+  closeDialog(event) {
+    this.display = event;
   }
 }

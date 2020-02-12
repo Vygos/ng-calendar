@@ -8,15 +8,21 @@ import { Calendar } from '@fullcalendar/core';
 
 @Component({
   selector: 'ng-calendar',
-  template: `<p-fullCalendar
-                [events]="events"
-                [options]="options"
-                [style]="style"
-                [styleClass]="styleClass">
-              </p-fullCalendar>`,
+  template: `
+    <div>
+      <ng-content select="header"></ng-content>
+      <p-fullCalendar
+        [events]="events"
+        [options]="options"
+        [style]="style"
+        [styleClass]="styleClass">
+      </p-fullCalendar>
+      <ng-content select="app-dialog"></ng-content>
+    </div>
+  `,
   styleUrls: ['./calendar.component.scss']
 })
-export class CalendarComponent implements OnInit{
+export class CalendarComponent implements OnInit {
 
   @ViewChild(FullCalendar) fullCalendar: FullCalendar;
 
